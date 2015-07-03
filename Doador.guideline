@@ -1,0 +1,43 @@
+Página 1:
+  * Selecionar Cidade <Pagina 2>
+  * Selecionar se já é cadastrado <Pagina 6>
+  
+Página 2:
+  * Selecionar Data <Página 3>
+  * Voltar <Página 1>
+  
+Página 3:
+  * Selecionar Horário <Página 4>
+  * Voltar <Página 2>
+  
+Página 4:
+  * Confirmar Cidade, Data e Horário <Página 5>
+  * Voltar <Página 3>
+  
+Página 5:
+  * Inserir Nome
+  * Inserir CPF
+  * Inserir E-Mail
+  * Efetuar Cadatro <Página 6>
+  * Cancelar <Página 1>
+  
+Página 6:
+  * Mensagem de confirmação
+  * Compartilhar em páginas sociais <API's respectivas>
+  
+Página 7:
+  * Inserir CPF
+  * Inserir Captcha
+  * Entrar <Página 8>
+  
+Página 8:
+  * Alterar Reserva <Página 9>
+  * ALterar Dados Cadastrais <Página 10>
+  
+Página 9:
+  * Alterar Horário
+  * Deletar Reserva
+  
+Página 10:
+  * Alterar Dados
+  
