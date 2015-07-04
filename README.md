@@ -12,3 +12,6 @@ Seviço de agendamento para doação de sangue e gerenciamento de campanhas para
   * `git add -u` Adicionar todos os arquivos modificados para a submissão
   * `git commit -m "MENSAGEM"` Criar uma commit com a mensagem digitada
   * `git push`
+
+### Dicas de HTML, CSS e SASS
+  * [MarkSheet](http://marksheet.io/)
