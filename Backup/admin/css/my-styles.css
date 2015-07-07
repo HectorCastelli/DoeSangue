@@ -1,0 +1,90 @@
+html{
+overflow-y:auto;
+font-size: 62.5%;
+background-color: #EFFFCD;
+	
+}
+@media (max-width: 300px) {
+    html { font-size: 70%; }
+	h1 { font-size: 70%;}
+}
+
+@media (min-width: 500px) {
+    html {	font-size: 80%; }
+	h1 { font-size: 80%;}
+}
+
+@media (min-width: 700px) {
+    html { font-size: 120%; }
+	h1 { font-size: 120%;}
+}
+
+@media (min-width: 1200px) {
+    html { font-size: 200%; }
+	h1 { font-size: 200%;}
+}
+img{
+	width: 20%;
+	height: 15%;
+	}
+	
+.navbar-header {
+position: absolute;
+left: 22.5%;
+margin: auto;}
+
+body{
+	background-color: #EFFFCD;
+	font-size: 1em;
+   padding-top: 70px;
+	max-width:100%;
+	overflow:auto;}
+.jumbotron{
+	opacity:0.95;	
+	background-color: #EFFFCD;
+	margin-left: auto;
+   margin-right: auto;
+	max-width: 80%;
+	border-radius: 6px;
+}
+.navbar-nav.nav-justified > li{
+    float:none;
+}
+.twitter-share-button
+{
+	transform: scale(3.2);
+	-ms-transform: scale(3.2);
+	-webkit-transform: scale(3.2);
+	-o-transform: scale(3.2);
+	-moz-transform: scale(3.2);
+
+} 
+
+ .fb-share-button
+{
+	
+	transform: scale(3.5);
+	-ms-transform: scale(3.5);
+	-webkit-transform: scale(3.5);
+	-o-transform: scale(3.5);
+	-moz-transform: scale(3.5);
+}
+
+.btn-group{
+	margin-left: auto;
+    margin-right: auto;
+	max-width: 80%;
+	border-radius:10px;	
+}
+.progress{
+	margin-left: auto;
+    margin-right: auto;
+	max-width: 80%;
+}
+.fb-like{
+	max-width: 400%;
+	margin-left: auto;
+    margin-right: auto;
+	border-radius:10px;
+
+}
