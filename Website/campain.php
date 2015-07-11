@@ -33,7 +33,8 @@
       <div class="row">
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
-              <li class="current"><a href="#">Selecionando Cidade</a></li>
+              <li><a href="index"><?php echo $_GET['cidade']?></a></li>
+              <li class="current"><a href="#">Selecionando Campanha</a></li>
               <!--Make This Dynamic-->
           </ul>
       </div>
@@ -42,10 +43,10 @@
           <div class="large-8 small-12 columns">
               <h4>Selecione uma cidade para doar</h4>
               <p>Essas são as cidades disponíveis:</p>
-              <form method="post" action="campain.php">
+              <form method="post">
                   <div class="large-12 columns">
                       <label>Cidades
-                          <select name="cidade">
+                          <select>
                               <option value="guaratingueta">Guaratinguetá</option>
                               <option value="aparecida">Aparecida</option>
                               <option value="taubate">Taubaté</option>
