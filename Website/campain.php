@@ -33,7 +33,7 @@
       <div class="row">
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
-              <li><a href="index"><?php echo $_GET['cidade']?></a></li>
+              <li><a href="index.php"><?php echo $_GET['cidade']?></a></li>
               <li class="current"><a href="#">Selecionando Campanha</a></li>
               <!--Make This Dynamic-->
           </ul>
@@ -41,20 +41,20 @@
 
       <div class="row">
           <div class="large-8 small-12 columns">
-              <h4>Selecione uma cidade para doar</h4>
-              <p>Essas são as cidades disponíveis:</p>
+              <h4>Selecione uma campanha para doar</h4>
+            <p>Essas são as campanhas disponíveis em <?php echo $_GET['cidade']?>:</p>
               <form method="post">
                   <div class="large-12 columns">
-                      <label>Cidades
+                      <label>Campanhas
                           <select>
-                              <option value="guaratingueta">Guaratinguetá</option>
-                              <option value="aparecida">Aparecida</option>
-                              <option value="taubate">Taubaté</option>
+                              <option value="1">01/01/15</option>
+                              <option value="2">20/10/15</option>
+                              <option value="3">25/12/15</option>
                           </select>
                       </label>
                       <ul class="button-group even-2">
-                          <li><a href="#" class="button alert">Cancelar</a></li>
-                          <li><a href="#" class="button success">Aceitar</a></li>
+                          <li><button class="button error" name="Cancelar" type="reset">Cancelar</button></li>
+                          <li><button class="button success" name="Aceitar" type="submit">Aceitar</button></li>
                       </ul>
                   </div>
               </form>

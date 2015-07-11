@@ -42,7 +42,7 @@
           <div class="large-8 small-12 columns">
               <h4>Selecione uma cidade para doar</h4>
               <p>Essas são as cidades disponíveis:</p>
-              <form method="post" action="campain.php">
+              <form method="get" action="campain.php">
                   <div class="large-12 columns">
                       <label>Cidades
                           <select name="cidade">
@@ -52,8 +52,8 @@
                           </select>
                       </label>
                       <ul class="button-group even-2">
-                          <li><a href="#" class="button alert">Cancelar</a></li>
-                          <li><a href="#" class="button success">Aceitar</a></li>
+                          <li><button class="button error" name="Cancelar" type="reset">Cancelar</button></li>
+                          <li><button class="button success" name="Aceitar" type="submit">Aceitar</button></li>
                       </ul>
                   </div>
               </form>
