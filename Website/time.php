@@ -33,29 +33,40 @@
       <div class="row">
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
-              <li><a href="cidade.php"><?php echo $_GET['cidade']?></a></li>
-              <li class="current"><a href="#">Selecionando Campanha</a></li>
+              <li><a href="cidade.php"><?php echo cidade?></a></li>
+              <li><a href="campain.php?cidade=guaratingueta"><?php echo $_GET['campanha']?></a></li>
+              <li class="current"><a href="#">Selecionando Horário</a></li>
               <!--Make This Dynamic-->
           </ul>
       </div>
 
       <div class="row">
           <div class="large-8 small-12 columns">
-              <h4>Selecione uma campanha para doar</h4>
-            <p>Essas são as campanhas disponíveis em <?php echo $_GET['cidade']?>:</p>
-              <form method="get" action="time.php">
+              <h4>Selecione um horário para doar</h4>
+              <form method="post">
                   <div class="large-12 columns">
-                      <label>Campanhas
-                          <select name="campanha">
-                              <option value="1">01/01/15</option>
-                              <option value="2">20/10/15</option>
-                              <option value="3">25/12/15</option>
-                          </select>
-                      </label>
-                      <ul class="button-group even-2">
-                          <li><button class="button error" name="Cancelar" type="reset">Cancelar</button></li>
-                          <li><button class="button success" name="Aceitar" type="submit">Aceitar</button></li>
-                      </ul>
+                      <div class="button-group">
+                        <ul class="button-group round">
+                          <ul class="button-group round">
+                            <li><a href="#" class="small button secondary">Nome</a></li>
+                            <li><a href="#" class="small button secondary">Nome</a></li>
+                            <li><a href="#" class="small button secondary">Nome</a></li>
+                            <li><a href="#" class="small button secondary">Nome</a></li>
+                          </ul>
+                          <ul class="button-group round">
+                            <li><a href="#" class="small button secondary">Nome</a></li>
+                            <li><a href="#" class="small button secondary">Nome</a></li>
+                            <li><a href="#" class="small button secondary">Nome</a></li>
+                            <li><a href="#" class="small button secondary">Nome</a></li>
+                          </ul>
+                          <ul class="button-group round">
+                            <li><a href="#" class="small button secondary">Nome</a></li>
+                            <li><a href="#" class="small button secondary">Nome</a></li>
+                            <li><a href="#" class="small button secondary">Nome</a></li>
+                            <li><a href="#" class="small button secondary">Nome</a></li>
+                          </ul>
+                        </ul>
+                      </div>
                   </div>
               </form>
           </div>

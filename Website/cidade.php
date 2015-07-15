@@ -33,23 +33,22 @@
       <div class="row">
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
-              <li><a href="cidade.php"><?php echo $_GET['cidade']?></a></li>
-              <li class="current"><a href="#">Selecionando Campanha</a></li>
+              <li class="current"><a href="#">Selecionando Cidade</a></li>
               <!--Make This Dynamic-->
           </ul>
       </div>
 
       <div class="row">
           <div class="large-8 small-12 columns">
-              <h4>Selecione uma campanha para doar</h4>
-            <p>Essas são as campanhas disponíveis em <?php echo $_GET['cidade']?>:</p>
-              <form method="get" action="time.php">
+              <h4>Selecione uma cidade para doar</h4>
+              <p>Essas são as cidades disponíveis:</p>
+              <form method="get" action="campain.php">
                   <div class="large-12 columns">
-                      <label>Campanhas
-                          <select name="campanha">
-                              <option value="1">01/01/15</option>
-                              <option value="2">20/10/15</option>
-                              <option value="3">25/12/15</option>
+                      <label>Cidades
+                          <select name="cidade">
+                              <option value="guaratingueta">Guaratinguetá</option>
+                              <option value="aparecida">Aparecida</option>
+                              <option value="taubate">Taubaté</option>
                           </select>
                       </label>
                       <ul class="button-group even-2">
