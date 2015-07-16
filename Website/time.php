@@ -33,7 +33,7 @@
       <div class="row">
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
-              <li><a href="cidade.php"><?php echo cidade?></a></li>
+              <li><a href="city.php"><?php echo cidade?></a></li>
               <li><a href="campain.php?cidade=guaratingueta"><?php echo $_GET['campanha']?></a></li>
               <li class="current"><a href="#">Selecionando Horário</a></li>
               <!--Make This Dynamic-->

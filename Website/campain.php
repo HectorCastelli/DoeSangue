@@ -33,7 +33,7 @@
       <div class="row">
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
-              <li><a href="cidade.php"><?php echo $_GET['cidade']?></a></li>
+              <li><a href="city.php"><?php echo $_GET['cidade']?></a></li>
               <li class="current"><a href="#">Selecionando Campanha</a></li>
               <!--Make This Dynamic-->
           </ul>

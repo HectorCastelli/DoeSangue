@@ -6,3 +6,8 @@
   Standards: HTML5, CSS3
   Components: jQuery, Orbit, Reveal
   Software: Coda, Textmate, Git
+
+/* AUTHORS */
+  Carlos Renato Zacharias - Project Idealizer
+  Héctor Castelli Zacharias - Designer, Coder, Beta-Tester and Head of the Programming project
+  Caio Henrique Freitas - Back-end coder
