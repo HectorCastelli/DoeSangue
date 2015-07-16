@@ -52,7 +52,7 @@
                         <span class="prefix">Nome</span>
                       </div>
                       <div class="small-10 columns">
-                        <input name="name" type="text" placeholder="Nome">
+                        <input name="name" type="text" required placeholder="Nome">
                       </div>
                     </div>
                     <div class="row collapse prefix-radius">
@@ -60,7 +60,7 @@
                         <span class="prefix">E-Mail</span>
                       </div>
                       <div class="small-10 columns">
-                        <input name="mail" type="text" placeholder="E-Mail">
+                        <input name="mail" type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-Mail">
                       </div>
                     </div>
                     <div class="row collapse prefix-radius">
@@ -68,7 +68,7 @@
                         <span class="prefix">CPF</span>
                       </div>
                       <div class="small-10 columns">
-                        <input name="cpf" type="text" placeholder="CPF">
+                        <input name="cpf" type="text" required pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" placeholder="CPF com pontos e hífens">
                       </div>
                     </div>
                     <ul class="button-group even-2">
