@@ -45,14 +45,14 @@
               <form method="get" action="campain.php">
                   <div class="large-12 columns">
                       <label>Cidades
-                          <select name="cidade">
+                          <select name="city">
                               <option value="guaratingueta">Guaratinguetá</option>
                               <option value="aparecida">Aparecida</option>
                               <option value="taubate">Taubaté</option>
                           </select>
                       </label>
                       <ul class="button-group even-2">
-                          <li><button class="button error" name="Cancelar" type="reset">Cancelar</button></li>
+                          <li><button class="button alert" name="Cancelar" type="reset">Cancelar</button></li>
                           <li><button class="button success" name="Aceitar" type="submit">Aceitar</button></li>
                       </ul>
                   </div>

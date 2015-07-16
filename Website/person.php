@@ -33,29 +33,48 @@
       <div class="row">
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
-              <li><a href="city.php"><?php echo $_GET['city']?></a></li>
-              <li class="current"><a href="#">Selecionando Campanha</a></li>
+              <li><a href="city.php"><?php echo $_GET['cidade']?></a></li>
+              <li><a href="campain.php"><?php echo $_GET['campanha']?></a></li>
+              <li><a href="time.php"><?php echo $_GET['time']?></a></li>
+              <li class="current"><a href="#">Preenchendo dados</a></li>
               <!--Make This Dynamic-->
           </ul>
       </div>
 
       <div class="row">
           <div class="large-8 small-12 columns">
-              <h4>Selecione uma campanha para doar</h4>
-            <p>Essas são as campanhas disponíveis em <?php echo $_GET['city']?>:</p>
-              <form method="get" action="time.php">
+            <h4>Insira seus dados abaixo para reservar seu horário</h4>
+            <p>Seu horário é <?php echo $_GET['time']?> na cidade de <?php echo $_GET['city']?> na campanha <?php echo $_GET['campain']?> :</p>
+              <form method="post" action="register.php">
                   <div class="large-12 columns">
-                      <label>Campanhas
-                          <select name="campain">
-                              <option value="1">01/01/15</option>
-                              <option value="2">20/10/15</option>
-                              <option value="3">25/12/15</option>
-                          </select>
-                      </label>
-                      <ul class="button-group even-2">
-                          <li><button class="button alert" type="reset">Cancelar</button></li>
-                          <li><button class="button success" type="submit">Aceitar</button></li>
-                      </ul>
+                    <div class="row collapse prefix-radius">
+                      <div class="small-2 columns">
+                        <span class="prefix">Nome</span>
+                      </div>
+                      <div class="small-10 columns">
+                        <input name="name" type="text" placeholder="Nome">
+                      </div>
+                    </div>
+                    <div class="row collapse prefix-radius">
+                      <div class="small-2 columns">
+                        <span class="prefix">E-Mail</span>
+                      </div>
+                      <div class="small-10 columns">
+                        <input name="mail" type="text" placeholder="E-Mail">
+                      </div>
+                    </div>
+                    <div class="row collapse prefix-radius">
+                      <div class="small-2 columns">
+                        <span class="prefix">CPF</span>
+                      </div>
+                      <div class="small-10 columns">
+                        <input name="cpf" type="text" placeholder="CPF">
+                      </div>
+                    </div>
+                    <ul class="button-group even-2">
+                      <li><button class="button alert" type="reset">Cancelar</button></li>
+                      <li><button class="button success" type="submit">Aceitar</button></li>
+                    </ul>
                   </div>
               </form>
           </div>

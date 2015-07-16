@@ -34,7 +34,7 @@
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
               <li><a href="city.php"><?php echo cidade?></a></li>
-              <li><a href="campain.php?cidade=guaratingueta"><?php echo $_GET['campanha']?></a></li>
+              <li><a href="campain.php?cidade=guaratingueta"><?php echo $_GET['campain']?></a></li>
               <li class="current"><a href="#">Selecionando Horário</a></li>
               <!--Make This Dynamic-->
           </ul>
@@ -43,30 +43,32 @@
       <div class="row">
           <div class="large-8 small-12 columns">
               <h4>Selecione um horário para doar</h4>
-              <form method="post">
+              <form method="post" action="person.php">
                   <div class="large-12 columns">
                       <div class="button-group">
-                        <ul class="button-group round">
-                          <ul class="button-group round">
-                            <li><a href="#" class="small button secondary">Nome</a></li>
-                            <li><a href="#" class="small button secondary">Nome</a></li>
-                            <li><a href="#" class="small button secondary">Nome</a></li>
-                            <li><a href="#" class="small button secondary">Nome</a></li>
-                          </ul>
-                          <ul class="button-group round">
-                            <li><a href="#" class="small button secondary">Nome</a></li>
-                            <li><a href="#" class="small button secondary">Nome</a></li>
-                            <li><a href="#" class="small button secondary">Nome</a></li>
-                            <li><a href="#" class="small button secondary">Nome</a></li>
-                          </ul>
-                          <ul class="button-group round">
-                            <li><a href="#" class="small button secondary">Nome</a></li>
-                            <li><a href="#" class="small button secondary">Nome</a></li>
-                            <li><a href="#" class="small button secondary">Nome</a></li>
-                            <li><a href="#" class="small button secondary">Nome</a></li>
-                          </ul>
+                        <ul class="button-group round even-4">
+                          <li><a href="#" class="small button success">Livre</a></li>
+                          <li><a href="#" class="small button secondary disabled">Ocupado</a></li>
+                          <li><a href="#" class="small button success">Livre</a></li>
+                          <li><a href="#" class="small button success">Livre</a></li>
+                        </ul>
+                        <ul class="button-group round even-4">
+                          <li><a href="#" class="small button success">Livre</a></li>
+                          <li><a href="#" class="small button secondary disabled">Ocupado</a></li>
+                          <li><a href="#" class="small button success">Livre</a></li>
+                          <li><a href="#" class="small button success">Livre</a></li>
+                        </ul>
+                        <ul class="button-group round even-4">
+                          <li><a href="#" class="small button success">Livre</a></li>
+                          <li><a href="#" class="small button success">Livre</a></li>
+                          <li><a href="#" class="small button secondary disabled">Ocupado</a></li>
+                          <li><a href="#" class="small button secondary disabled">Ocupado</a></li>
                         </ul>
                       </div>
+                      <ul class="button-group even-2">
+                        <li><button class="button alert" type="reset">Cancelar</button></li>
+                        <li><button class="button success" type="submit">Aceitar</button></li>
+                      </ul>
                   </div>
               </form>
           </div>
