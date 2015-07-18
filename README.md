@@ -9,7 +9,7 @@ Seviço de agendamento para doação de sangue e gerenciamento de campanhas para
 
 ## Como fazer update para o Servidor através da linha de comando:
   * `git status` Verificar o STATUS da GIT
-  * `git add -u` Adicionar todos os arquivos modificados para a submissão
+  * `git add -A` Adicionar todos os arquivos modificados para a submissão
   * `git commit -m "MENSAGEM"` Criar uma commit com a mensagem digitada
   * `git push`
 
