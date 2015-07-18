@@ -16,6 +16,10 @@ Seviço de agendamento para doação de sangue e gerenciamento de campanhas para
 ### Dicas de HTML, CSS e SASS
   * [MarkSheet](http://marksheet.io/)
 
+### Dicas PHP e MySQL
+  * [PHP](http://php.net)
+  * [MySQL](http://dev.mysql.com/doc/)
+
 
 
 ### Foundation Compass Template
