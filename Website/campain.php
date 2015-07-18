@@ -11,7 +11,7 @@
       <nav class="top-bar" data-topbar role="navigation">
           <ul class="title-area">
               <li class="name">
-                  <h1><a href="index.php">DoeSangue</a></h1>
+                  <h1><a href="index.html">DoeSangue</a></h1>
               </li>
               <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
               <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -41,23 +41,14 @@
 
       <div class="row">
           <div class="large-8 small-12 columns">
-              <h4>Selecione uma campanha para doar</h4>
+            <h4>Selecione uma campanha para doar</h4>
             <p>Essas são as campanhas disponíveis em <?php echo $_GET['city']?>:</p>
-              <form method="get" action="time.php">
-                  <div class="large-12 columns">
-                      <label>Campanhas
-                          <select name="campain">
-                              <option value="1">01/01/15</option>
-                              <option value="2">20/10/15</option>
-                              <option value="3">25/12/15</option>
-                          </select>
-                      </label>
-                      <ul class="button-group even-2">
-                          <li><button class="button alert" type="reset">Cancelar</button></li>
-                          <li><button class="button success" type="submit">Aceitar</button></li>
-                      </ul>
-                  </div>
-              </form>
+            <div class="large-12 columns">
+              <a class="button radius large-12 small-12" href="time.php?city=prev?campain=1">15/07/15</a>
+              <a class="button radius large-12 small-12" href="time.php?city=prev?campain=2">12/09/15</a>
+              <a class="button radius large-12 small-12" href="time.php?city=prev?campain=3">26/11/15</a>
+              <a class="button radius large-12 small-12" href="time.php?city=prev?campain=4">01/01/16</a>
+            </div>
           </div>
           <div class="large-4 show-for-medium-up columns">
               <div class="panel">

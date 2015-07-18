@@ -11,7 +11,7 @@
       <nav class="top-bar" data-topbar role="navigation">
           <ul class="title-area">
               <li class="name">
-                  <h1><a href="index.php">DoeSangue</a></h1>
+                  <h1><a href="index.html">DoeSangue</a></h1>
               </li>
               <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
               <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -42,35 +42,13 @@
 
       <div class="row">
           <div class="large-8 small-12 columns">
-              <h4>Selecione um horário para doar</h4>
-              <form method="post" action="person.php">
-                  <div class="large-12 columns">
-                      <div class="button-group">
-                        <ul class="button-group round even-4">
-                          <li><a href="#" class="small button success">Livre</a></li>
-                          <li><a href="#" class="small button secondary disabled">Ocupado</a></li>
-                          <li><a href="#" class="small button success">Livre</a></li>
-                          <li><a href="#" class="small button success">Livre</a></li>
-                        </ul>
-                        <ul class="button-group round even-4">
-                          <li><a href="#" class="small button success">Livre</a></li>
-                          <li><a href="#" class="small button secondary disabled">Ocupado</a></li>
-                          <li><a href="#" class="small button success">Livre</a></li>
-                          <li><a href="#" class="small button success">Livre</a></li>
-                        </ul>
-                        <ul class="button-group round even-4">
-                          <li><a href="#" class="small button success">Livre</a></li>
-                          <li><a href="#" class="small button success">Livre</a></li>
-                          <li><a href="#" class="small button secondary disabled">Ocupado</a></li>
-                          <li><a href="#" class="small button secondary disabled">Ocupado</a></li>
-                        </ul>
-                      </div>
-                      <ul class="button-group even-2">
-                        <li><button class="button alert" type="reset">Cancelar</button></li>
-                        <li><button class="button success" type="submit">Aceitar</button></li>
-                      </ul>
-                  </div>
-              </form>
+            <h4>Selecione um horário para doar</h4>
+            <div class="large-12 columns">
+              <a class="button radius large-12 small-12 success" href="person.php?city=prev?campain=prev?time=1">Disponível</a>
+              <a class="button radius large-12 small-12 success" href="person.php?city=prev?campain=prev?time=2">Disponível</a>
+              <span class="button radius large-12 small-12 alert disabled">Lotado</span>
+              <a class="button radius large-12 small-12 success" href="person.php?city=prev?campain=prev?time=4">Disponível</a>
+            </div>
           </div>
           <div class="large-4 show-for-medium-up columns">
               <div class="panel">
