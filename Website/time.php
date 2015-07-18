@@ -33,7 +33,7 @@
       <div class="row">
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
-              <li><a href="city.php"><?php echo cidade?></a></li>
+              <li><a href="city.php"><?php echo $_GET['city']?></a></li>
               <li><a href="campain.php?cidade=guaratingueta"><?php echo $_GET['campain']?></a></li>
               <li class="current"><a href="#">Selecionando Horário</a></li>
               <!--Make This Dynamic-->
@@ -44,10 +44,10 @@
           <div class="large-8 small-12 columns">
             <h4>Selecione um horário para doar</h4>
             <div class="large-12 columns">
-              <a class="button radius large-12 small-12 success" href="person.php?city=prev?campain=prev?time=1">Disponível</a>
-              <a class="button radius large-12 small-12 success" href="person.php?city=prev?campain=prev?time=2">Disponível</a>
+              <a class="button radius large-12 small-12 success" href="person.php?city=prev&campain=prev&time=1">Disponível</a>
+              <a class="button radius large-12 small-12 success" href="person.php?city=prev&campain=prev&time=2">Disponível</a>
               <span class="button radius large-12 small-12 alert disabled">Lotado</span>
-              <a class="button radius large-12 small-12 success" href="person.php?city=prev?campain=prev?time=4">Disponível</a>
+              <a class="button radius large-12 small-12 success" href="person.php?city=prev&campain=prev&time=4">Disponível</a>
             </div>
           </div>
           <div class="large-4 show-for-medium-up columns">

@@ -44,10 +44,10 @@
             <h4>Selecione uma campanha para doar</h4>
             <p>Essas são as campanhas disponíveis em <?php echo $_GET['city']?>:</p>
             <div class="large-12 columns">
-              <a class="button radius large-12 small-12" href="time.php?city=prev?campain=1">15/07/15</a>
-              <a class="button radius large-12 small-12" href="time.php?city=prev?campain=2">12/09/15</a>
-              <a class="button radius large-12 small-12" href="time.php?city=prev?campain=3">26/11/15</a>
-              <a class="button radius large-12 small-12" href="time.php?city=prev?campain=4">01/01/16</a>
+              <a class="button radius large-12 small-12" href="time.php?city=prev&campain=1">15/07/15</a>
+              <a class="button radius large-12 small-12" href="time.php?city=prev&campain=2">12/09/15</a>
+              <a class="button radius large-12 small-12" href="time.php?city=prev&campain=3">26/11/15</a>
+              <a class="button radius large-12 small-12" href="time.php?city=prev&campain=4">01/01/16</a>
             </div>
           </div>
           <div class="large-4 show-for-medium-up columns">

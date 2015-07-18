@@ -35,7 +35,7 @@
           <ul class="breadcrumbs">
               <li><a href="city.php"><?php echo $_GET['cidade']?></a></li>
               <li><a href="campain.php"><?php echo $_GET['campanha']?></a></li>
-              <li><a href="time.php"><?php echo $_GET['time']?></a></li>
+              <li><a href="time.php" class="disabled"><?php echo $_GET['time']?></a></li>
               <li class="current"><a href="#">Preenchendo dados</a></li>
               <!--Make This Dynamic-->
           </ul>
