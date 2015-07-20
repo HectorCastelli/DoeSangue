@@ -22,7 +22,7 @@
           </ul>
           <section class="top-bar-section">
               <ul class="left">
-                  <li class="active"><a href="index.php">Home</a></li>
+                  <li class="active"><a href="index.html">Home</a></li>
                   <li><a href="help.html">Ajuda</a></li>
               </ul>
           </section>
