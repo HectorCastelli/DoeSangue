@@ -1,18 +1,6 @@
 <?php
   $servername = "localhost";
-  $username = "root";
-  $password = "";
-
-  // Create connection
-  $conn = new mysqli($servername, $username, $password);
-
-  // Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-  echo "Connected successfully";
-
-  //connect to schema "sangue"
-
-  $conn->close();
+  $username = "hector";
+  $password = "ernizio996";
+  $database = "sangue";
 ?>

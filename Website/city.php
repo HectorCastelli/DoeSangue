@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
+  <?php
+    require("mysql_config.php");
+  ?>
   <body>
       <nav class="top-bar" data-topbar role="navigation">
           <ul class="title-area">
@@ -43,40 +46,31 @@
               <h4>Selecione uma cidade para doar</h4>
               <p>Essas são as cidades disponíveis:</p>
               <ul class="accordion" data-accordion>
-                <li class="accordion-navigation">
-                  <a href="#panelguaratingueta">Guaratingueta</a>
-                  <div id="panelguaratingueta" class="content">
-                    <div class="large-12 columns">
-                      <a class="button radius large-12 small-12" href="time.php?city=guaratingueta&campain=1">15/07/15</a>
-                      <a class="button radius large-12 small-12" href="time.php?city=guaratingueta&campain=2">12/09/15</a>
-                      <a class="button radius large-12 small-12" href="time.php?city=guaratingueta&campain=3">26/11/15</a>
-                      <a class="button radius large-12 small-12" href="time.php?city=guaratingueta&campain=4">01/01/16</a>
-                    </div>
-                  </div>
-                </li>
-                  <li class="accordion-navigation">
-                  <a href="#panellorena">Lorena</a>
-                  <div id="panellorena" class="content">
-                    <div class="large-12 columns">
-                      <a class="button radius large-12 small-12" href="time.php?city=lorena&campain=1">15/07/15</a>
-                      <a class="button radius large-12 small-12" href="time.php?city=lorena&campain=2">12/09/15</a>
-                      <a class="button radius large-12 small-12" href="time.php?city=lorena&campain=3">26/11/15</a>
-                      <a class="button radius large-12 small-12" href="time.php?city=lorena&campain=4">01/01/16</a>
-                    </div>
-                  </div>
-                </li>
-                <li class="accordion-navigation">
-                  <a href="#panelaparecida">Aparecida</a>
-                  <div id="panelaparecida" class="content">
-                    <div class="large-12 columns">
-                      <a class="button radius large-12 small-12" href="time.php?city=aparecida&campain=1">15/07/15</a>
-                      <a class="button radius large-12 small-12" href="time.php?city=aparecida&campain=2">12/09/15</a>
-                      <a class="button radius large-12 small-12" href="time.php?city=aparecida&campain=3">26/11/15</a>
-                      <a class="button radius large-12 small-12" href="time.php?city=aparecida&campain=4">01/01/16</a>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+                <?php
+                $dbConnection = mysql_connect($servername, $username, $password);
+                mysql_select_db($database, $dbConnection);
+                $count=0;
+                $query = mysql_query("SELECT `city`.`name`, `campain`.`enabled` FROM `sangue`.`campain` INNER JOIN `sangue`.`city` ON `campain`.`idcity`=`city`.`idcity` WHERE `campain`.`enabled` = '1' GROUP BY `name` ORDER BY `name` ASC;");
+                while($row = mysql_fetch_array($query)) {
+                  echo ('
+                    <li class="accordion-navigation">
+                      <a href="#panel'.$count.'">'.$row["name"].'</a>
+                      <div id="panel'.$count.'" class="content">'
+                        );
+                  $query2 = mysql_query("SELECT `campain`.`idcampain`, `campain`.`date`, `campain`.`enabled` FROM `sangue`.`campain` INNER JOIN `sangue`.`city` ON `campain`.`idcity`=`city`.`idcity` WHERE `campain`.`enabled` = '1' AND `city`.`name` = '".$row["name"]."' ORDER BY `name` ASC;");
+                  while ($row2 = mysql_fetch_array($query2)) {
+                    echo ('
+                      <a class="button radius large-12 small-12" href="time.php?city='.$row["name"].'&campain='.$row2["idcampain"].'">'.$row2["date"].'</a>
+                    ');
+                  }
+                  echo ('
+                      </div>
+                    </li>
+                    ');
+                  $count++;
+                }
+                mysql_close($dbConnection);
+                ?>
           </div>
           <div class="large-4 show-for-medium-up columns">
               <div class="panel">
@@ -90,5 +84,8 @@
       <script src="bower_components/jquery/dist/jquery.min.js"></script>
       <script src="bower_components/foundation/js/foundation.min.js"></script>
       <script src="js/app.js"></script>
+      <?php
+        require 'mysql_close.php';
+      ?>
   </body>
 </html>
