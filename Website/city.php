@@ -42,12 +42,41 @@
           <div class="large-8 small-12 columns">
               <h4>Selecione uma cidade para doar</h4>
               <p>Essas são as cidades disponíveis:</p>
-              <div class="large-12 columns">
-                <a class="button radius large-12 small-12" href="campain.php?city=guaratingueta">Guaratinguetá</a>
-                <a class="button radius large-12 small-12" href="campain.php?city=aparecida">Aparecida</a>
-                <a class="button radius large-12 small-12" href="campain.php?city=lorena">Lorena</a>
-                <a class="button radius large-12 small-12" href="campain.php?city=taubate">Taubaté</a>
-              </div>
+              <ul class="accordion" data-accordion>
+                <li class="accordion-navigation">
+                  <a href="#panelguaratingueta">Guaratingueta</a>
+                  <div id="panelguaratingueta" class="content">
+                    <div class="large-12 columns">
+                      <a class="button radius large-12 small-12" href="time.php?city=guaratingueta&campain=1">15/07/15</a>
+                      <a class="button radius large-12 small-12" href="time.php?city=guaratingueta&campain=2">12/09/15</a>
+                      <a class="button radius large-12 small-12" href="time.php?city=guaratingueta&campain=3">26/11/15</a>
+                      <a class="button radius large-12 small-12" href="time.php?city=guaratingueta&campain=4">01/01/16</a>
+                    </div>
+                  </div>
+                </li>
+                  <li class="accordion-navigation">
+                  <a href="#panellorena">Lorena</a>
+                  <div id="panellorena" class="content">
+                    <div class="large-12 columns">
+                      <a class="button radius large-12 small-12" href="time.php?city=lorena&campain=1">15/07/15</a>
+                      <a class="button radius large-12 small-12" href="time.php?city=lorena&campain=2">12/09/15</a>
+                      <a class="button radius large-12 small-12" href="time.php?city=lorena&campain=3">26/11/15</a>
+                      <a class="button radius large-12 small-12" href="time.php?city=lorena&campain=4">01/01/16</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-navigation">
+                  <a href="#panelaparecida">Aparecida</a>
+                  <div id="panelaparecida" class="content">
+                    <div class="large-12 columns">
+                      <a class="button radius large-12 small-12" href="time.php?city=aparecida&campain=1">15/07/15</a>
+                      <a class="button radius large-12 small-12" href="time.php?city=aparecida&campain=2">12/09/15</a>
+                      <a class="button radius large-12 small-12" href="time.php?city=aparecida&campain=3">26/11/15</a>
+                      <a class="button radius large-12 small-12" href="time.php?city=aparecida&campain=4">01/01/16</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
           </div>
           <div class="large-4 show-for-medium-up columns">
               <div class="panel">
