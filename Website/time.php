@@ -38,7 +38,6 @@
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
               <li><a href="city.php"><?php echo $_GET['city']?></a></li>
-              <li><a href="campain.php?cidade=guaratingueta"><?php echo $_GET['campain']?></a></li>
               <li class="current"><a href="#">Selecionando Horário</a></li>
               <!--Make This Dynamic-->
           </ul>

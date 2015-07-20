@@ -31,20 +31,18 @@
       </div>
 
       <div class="row">
+  Aparecida&campain=3
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
-              <li><a href="city.php"><?php echo $_GET['cidade']?></a></li>
-              <li><a href="campain.php"><?php echo $_GET['campanha']?></a></li>
-              <li><a href="time.php" class="disabled"><?php echo $_GET['time']?></a></li>
+              <li><a href="city.php"><?php echo $_GET['city']?></a></li>
+              <li><?php echo('<a href="time.php?city='.$_GET['city'].'&campain='.$_GET[campain].'" class="disabled">'.$_GET["time"]);?></a></li>
               <li class="current"><a href="#">Preenchendo dados</a></li>
-              <!--Make This Dynamic-->
           </ul>
       </div>
 
       <div class="row">
           <div class="large-8 small-12 columns">
             <h4>Insira seus dados abaixo para reservar seu horário</h4>
-            <p>Seu horário é <?php echo $_GET['time']?> na cidade de <?php echo $_GET['city']?> na campanha <?php echo $_GET['campain']?> :</p>
               <form method="post" action="register.php">
                   <div class="large-12 columns">
                     <div class="row collapse prefix-radius">
