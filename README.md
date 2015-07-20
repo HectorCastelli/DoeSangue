@@ -21,6 +21,10 @@ Seviço de agendamento para doação de sangue e gerenciamento de campanhas para
   * [MySQL](http://dev.mysql.com/doc/)
   * [PHP5-tutorial](http://www.php5-tutorial.com/)
 
+### Icon list for HTML
+  * [FontAwesome](http://fortawesome.github.io/Font-Awesome/icons/)
+  Use `class=fa-ICONNAME`
+
 
 
 ### Foundation Compass Template
