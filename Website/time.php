@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
+  <?php
+    require("mysql_config.php");
+  ?>
   <body>
       <nav class="top-bar" data-topbar role="navigation">
           <ul class="title-area">
@@ -42,12 +45,24 @@
 
       <div class="row">
           <div class="large-8 small-12 columns">
-            <h4>Selecione um horário para doar</h4>
+            <h4>Selecione um horário disponível</h4>
             <div class="large-12 columns">
-              <a class="button radius large-12 small-12 success" href="person.php?city=prev&campain=prev&time=1">Disponível</a>
-              <a class="button radius large-12 small-12 success" href="person.php?city=prev&campain=prev&time=2">Disponível</a>
-              <span class="button radius large-12 small-12 alert disabled">Lotado</span>
-              <a class="button radius large-12 small-12 success" href="person.php?city=prev&campain=prev&time=4">Disponível</a>
+              <?php
+                $dbConnection = mysql_connect($servername, $username, $password);
+                mysql_select_db($database, $dbConnection);
+                $query = mysql_query("SELECT `campain`.`idcampain`, `campain`.`date`, `campain`.`vacant`, `campain`.`occupied` FROM `sangue`.`campain` WHERE `campain`.`idcampain` = ".$_GET['campain'].";");
+                while($row = mysql_fetch_array($query)) {
+                  $free = $row["vacant"];
+                  $taken = $row["occupied"];
+                  for ($i=0; $i<strlen($free); $i++) {
+                    if ($free[$i] - $taken[$i] > 0)
+                        echo ('<a class="button radius large-12 small-12 success" href="person.php?city='.$_GET['city'].'&campain='.$_GET['campain'].'&time='.$i.'">Disponível</a>');
+                    else
+                      echo ('<span class="button radius large-12 small-12 alert disabled">Lotado</span>');
+                  }
+                }
+                mysql_close($dbConnection);
+              ?>
             </div>
           </div>
           <div class="large-4 show-for-medium-up columns">
