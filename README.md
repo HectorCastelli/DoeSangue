@@ -3,7 +3,7 @@ Seviço de agendamento para doação de sangue e gerenciamento de campanhas para
 
 ## Clonar o Repositório na linha de comando:
   É necessário configurar o seu terminal para aceitar o SSH. O guia está [aqui](https://help.github.com/articles/which-remote-url-should-i-use/).
-  
+
   `git clone <endereço SSH>`
   O endereço do SSH está no canto inferior direito do github. Por padrão está escrito **"HTTPS clone URL"**
 
@@ -19,6 +19,7 @@ Seviço de agendamento para doação de sangue e gerenciamento de campanhas para
 ### Dicas PHP e MySQL
   * [PHP](http://php.net)
   * [MySQL](http://dev.mysql.com/doc/)
+  * [PHP5-tutorial](http://www.php5-tutorial.com/)
 
 
 
@@ -37,7 +38,7 @@ The easiest way to get started with Foundation + Compass.
 
   * [Download this starter compass project and unzip it](https://github.com/zurb/foundation-compass-template/archive/master.zip)
   * Run `bower install` to install the latest version of Foundation
-  
+
 Then when you're working on your project, just run the following command:
 
 ```bash
