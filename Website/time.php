@@ -63,7 +63,7 @@
                   }
                 }
                 mysql_close($dbConnection);
-              ?>l
+              ?>
             </div>
           </div>
           <div class="large-4 show-for-medium-up columns">

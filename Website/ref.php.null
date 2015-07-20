@@ -7,17 +7,14 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $database = "sangue";
-// Create connection
-$conn = new mysqli_connect($servername, $username, $password, $database) or die("Error " . mysqli_error($conn);
-//consultation:
-$query = "SELECT name FROM mytable" or die("Error in the consult.." . mysqli_error($link));
-//execute the query.
-$result = $link->query($query);
-//display information:
-while($row = mysqli_fetch_array($result)) {
-echo $row["name"] . "<br>";
+
+$dbConnection = mysql_connect($servername, $username, $password);
+mysql_select_db($database, $dbConnection);
+$query = mysql_query("SELECT `city`.`name`, `campain`.`enabled` FROM `sangue`.`campain` INNER JOIN `sangue`.`city` ON `campain`.`idcity`=`city`.`idcity` WHERE `campain`.`enabled` = '1' GROUP BY `name` ORDER BY `name` ASC;");
+while($row = mysql_fetch_array($query)) {
+  $row["campo"];
 }
-//Close  connection
-$conn -> close();
+mysql_close($dbConnection);
+
 #################################################
 ?>
