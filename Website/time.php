@@ -9,6 +9,7 @@
   </head>
   <?php
     require("mysql_config.php");
+    require("functions.php");
   ?>
   <body>
       <nav class="top-bar" data-topbar role="navigation">
@@ -50,19 +51,20 @@
               <?php
                 $dbConnection = mysql_connect($servername, $username, $password);
                 mysql_select_db($database, $dbConnection);
-                $query = mysql_query("SELECT `campain`.`idcampain`, `campain`.`date`, `campain`.`vacant`, `campain`.`occupied` FROM `sangue`.`campain` WHERE `campain`.`idcampain` = ".$_GET['campain'].";");
+                $query = mysql_query("SELECT `campain`.`idcampain`, `campain`.`date`, `campain`.`vacant`, `campain`.`occupied`, `campain`.`starttime` FROM `sangue`.`campain` WHERE `campain`.`idcampain` = ".$_GET['campain'].";");
                 while($row = mysql_fetch_array($query)) {
                   $free = $row["vacant"];
                   $taken = $row["occupied"];
+                  $start = $row["starttime"];
                   for ($i=0; $i<strlen($free); $i++) {
                     if ($free[$i] - $taken[$i] > 0)
-                        echo ('<a class="button radius large-12 small-12 success" href="person.php?city='.$_GET['city'].'&campain='.$_GET['campain'].'&time='.$i.'">Disponível</a>');
+                        echo ('<a class="button radius large-12 small-12 success" href="person.php?city='.$_GET['city'].'&campain='.$_GET['campain'].'&time='.$i.'">'.resTime($start, $i).'</a>');
                     else
-                      echo ('<span class="button radius large-12 small-12 alert disabled">Lotado</span>');
+                      echo ('<span class="button radius large-12 small-12 alert disabled">'.resTime($start, $i).'</span>');
                   }
                 }
                 mysql_close($dbConnection);
-              ?>
+              ?>l
             </div>
           </div>
           <div class="large-4 show-for-medium-up columns">

@@ -9,6 +9,7 @@
   </head>
   <?php
     require("mysql_config.php");
+    require("functions.php");
   ?>
   <body>
       <nav class="top-bar" data-topbar role="navigation">
@@ -60,7 +61,7 @@
                   $query2 = mysql_query("SELECT `campain`.`idcampain`, `campain`.`date`, `campain`.`enabled` FROM `sangue`.`campain` INNER JOIN `sangue`.`city` ON `campain`.`idcity`=`city`.`idcity` WHERE `campain`.`enabled` = '1' AND `city`.`name` = '".$row["name"]."' ORDER BY `name` ASC;");
                   while ($row2 = mysql_fetch_array($query2)) {
                     echo ('
-                      <a class="button radius large-12 small-12" href="time.php?city='.$row["name"].'&campain='.$row2["idcampain"].'">'.$row2["date"].'</a>
+                      <a class="button radius large-12 small-12" href="time.php?city='.$row["name"].'&campain='.$row2["idcampain"].'">'.fixDate($row2["date"]).'</a>
                     ');
                   }
                   echo ('
