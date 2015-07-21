@@ -45,7 +45,7 @@
       <div class="row">
           <div class="large-8 small-12 columns">
               <h4>Selecione uma cidade onde doar.</h4>
-              <p>Essas são as cidades disponíveis:</p>
+              <p>Cidades disponíveis:</p>
               <ul class="accordion" data-accordion>
                 <?php
                 $dbConnection = mysql_connect($servername, $username, $password);
