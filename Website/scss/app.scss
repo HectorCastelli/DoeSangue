@@ -41,3 +41,40 @@
 
 $fa-font-path:        "/bower_components/font-awesome/fonts";
 @import "font-awesome";
+
+// We use these as default colors throughout
+// $primary-color: #008CBA;
+// $secondary-color: #e7e7e7;
+// $alert-color: #f04124;
+// $success-color: #43AC6A;
+// $warning-color: #f08a24;
+// $info-color: #a0d3e8;
+
+
+// Add a class that changes the text color
+%color-primary{
+    color: $primary-color;
+}
+%color-secondary{
+    color: $secondary-color;
+}
+%color-alert{
+    color: $alert-color;
+}
+%color-success{
+    color: $success-color;
+}
+%color-warning{
+    color: $warning-color;
+}
+%color-info{
+    color: $info-color;
+}
+@mixin set-styles($arg) {
+    @extend %color-#{$arg};
+}
+@each $class in primary, secondary, alert, success, warning, info {
+  .#{$class}-text {
+    @include set-styles($class);
+  }
+}

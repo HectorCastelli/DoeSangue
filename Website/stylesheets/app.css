@@ -12332,3 +12332,33 @@ th.hide-for-touch {
 .fa-medium:before {
   content: "";
 }
+
+/* line 55, ../scss/app.scss */
+.primary-text {
+  color: #008CBA;
+}
+
+/* line 58, ../scss/app.scss */
+.secondary-text {
+  color: #e7e7e7;
+}
+
+/* line 61, ../scss/app.scss */
+.alert-text {
+  color: #f04124;
+}
+
+/* line 64, ../scss/app.scss */
+.success-text {
+  color: #43AC6A;
+}
+
+/* line 67, ../scss/app.scss */
+.warning-text {
+  color: #f08a24;
+}
+
+/* line 70, ../scss/app.scss */
+.info-text {
+  color: #a0d3e8;
+}
