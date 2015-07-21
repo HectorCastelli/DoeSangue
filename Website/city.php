@@ -30,7 +30,7 @@
 
       <div class="row">
           <div class="large-12 columns">
-              <h1>Bem vindo ao portal Doe Sangue: agendamento eletrônico (1/3)</h1>
+              <h1>Portal Doe Sangue: agendamento eletrônico (1/3)</h1>
           </div>
       </div>
 
