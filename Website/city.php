@@ -30,21 +30,21 @@
 
       <div class="row">
           <div class="large-12 columns">
-              <h1>Bem vindo ao portal DoeSangue</h1>
+              <h1>Bem vindo ao portal Doe Sangue: agendamento eletrônico (1/3)</h1>
           </div>
       </div>
 
       <div class="row">
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
-              <li class="current"><a href="#">Selecionando Cidade</a></li>
+              <li class="current"><a href="#">Selecionando cidade e data</a></li>
               <!--Make This Dynamic-->
           </ul>
       </div>
 
       <div class="row">
           <div class="large-8 small-12 columns">
-              <h4>Selecione uma cidade para doar</h4>
+              <h4>Selecione uma cidade onde doar.</h4>
               <p>Essas são as cidades disponíveis:</p>
               <ul class="accordion" data-accordion>
                 <?php
@@ -76,8 +76,9 @@
           <div class="large-4 show-for-medium-up columns">
               <div class="panel">
                   <h4>Como funciona?</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-                  <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                  <p><em>Selecione a cidade</em> > <em>selecione a data da campanha</em> > escolha um horário > insira teus dados</p>
+						<p>Em outras palavras, você deve inicialmente selecionar a cidade onde deseja fazer a doação de sangue. Apenas as cidades já cadastradas nesse portal serão mostradas. Ao selecionar a cidade, serão mostradas as campanhas programadas, cujo agendamento está disponível!</p>
+                  <p>Nas próximas telas, você poderá escolher o horário para a doação e inserir teus dados pessoais!</p>
               </div>
           </div>
       </div>
