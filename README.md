@@ -15,6 +15,7 @@ Seviço de agendamento para doação de sangue e gerenciamento de campanhas para
 
 ### Dicas de HTML, CSS e SASS
   * [MarkSheet](http://marksheet.io/)
+  * [HTML Mail Best Practices](http://www.htmlgoodies.com/beyond/css/article.php/3679231)
 
 ### Dicas PHP e MySQL
   * [PHP](http://php.net)
