@@ -70,7 +70,8 @@
               <div class="panel">
                   <h4>Como funciona?</h4>
                   <p>Selecione a cidade > selecione a data da campanha > <em>escolha um horário</em> > insira teus dados</p>
-                  <p>Os horários mostrados em verde, estão disponíveis. Os demais (em vermelho) já estão esgotados!</p> <p>Não existe <em>lista de espera</em>, mas os doadores agendados podem cancelar a reserva até o dia anterior da campanha, de forma a alterar o quadro de vagas disponíveis.</p>
+                  <p>Os horários mostrados em verde, estão disponíveis. Os demais (em vermelho) já estão esgotados!</p> 
+						<p>Não existe <em>lista de espera</em>, mas os doadores agendados podem cancelar a reserva até o dia anterior da campanha, de forma a alterar o quadro de vagas disponíveis.</p>
               </div>
           </div>
       </div>

@@ -42,7 +42,7 @@
 
       <div class="row">
           <div class="large-8 small-12 columns">
-            <h4>Insira teus dados, para reservar o horário</h4>
+            <h4>Insira os dados, para reservar o horário</h4>
               <form method="post" action="register.php">
                   <input type="hidden" name="campain" value=<?php echo ('"'.$_GET['campain'].'"'); ?>>
                   <input type="hidden" name="time" value=<?php echo ('"'.$_GET['time'].'"'); ?>>
@@ -83,8 +83,8 @@
                   <h4>Como funciona?</h4>
                   <p>Selecione a cidade > selecione a data da campanha > escolha um horário > <em>insira teus dados</em></p>
 						<p>Os dados solicitados serão usados apenas para o registro e uso no portal e não serão disponibilizados para outros fins.</p>
-                  <p>O número do CPF será usado como <em>nome de usuário</em>, sempre que este deseje consultar ou cancelar uma reserva.</p>
-						<p>O nome é apenas para a identificação do doador, durante a campanha.</p>
+                  <p>O número do CPF será usado como <em>nome de usuário</em>, para consultar ou cancelar uma reserva.</p>
+						<p>O nome é para a identificação do doador, durante a campanha.</p>
 						<p>O e-mail será usado para que o portal possa enviar mensagens relembrando a reserva e para avisar quando novas campanhas são disponibilizadas.</p>
 						<p>Nenhum dado informado durante a campanha (biometria e entrevista) ou decorrente da análise do sangue coletado, será armazenado no portal. Estes dados são de uso restrito em atendimento às normas estabelecidas pelo Ministério da Saúde do Brasil.</p>
               </div>

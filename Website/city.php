@@ -77,8 +77,8 @@
               <div class="panel">
                   <h4>Como funciona?</h4>
                   <p><em>Selecione a cidade</em> > <em>selecione a data da campanha</em> > escolha um horário > insira teus dados</p>
-						<p>Em outras palavras, você deve inicialmente selecionar a cidade onde deseja fazer a doação de sangue. Apenas as cidades já cadastradas nesse portal serão mostradas. Ao selecionar a cidade, serão mostradas as campanhas programadas, cujo agendamento está disponível!</p>
-                  <p>Nas próximas telas, você poderá escolher o horário para a doação e inserir teus dados pessoais!</p>
+						<p>Você deve selecionar a cidade onde deseja fazer a doação de sangue (apenas as cidades já cadastradas nesse portal serão mostradas). Ao selecionar a cidade, serão mostradas as campanhas programadas, cujo agendamento está disponível!</p>
+                  <p>Nas próximas telas, você deverá escolher o horário para a doação e inserir os dados pessoais!</p>
               </div>
           </div>
       </div>
