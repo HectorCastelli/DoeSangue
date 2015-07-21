@@ -67,6 +67,8 @@
                     die('Invalid query: ' . mysql_error());
                   }
 
+
+                  //Add campain vacancy logic
                   echo ('<h4 class="success-text">Sucesso</h4>');
                   echo ('<p>Você deve receber um e-mail com seus dados e links para cancelar ou alterar a reserva.<br> Caso o mesmo não esteja na sua caixa de entrada, verifique sua caixa de <i class="alert-text">spam<i>.</p>');
                   mysql_close($dbConnection);
