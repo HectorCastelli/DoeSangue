@@ -45,6 +45,7 @@
             <h4>Insira seus dados abaixo para reservar seu horário</h4>
               <form method="post" action="register.php">
                   <input type="hidden" name="campain" value=<?php echo ('"'.$_GET['campain'].'"'); ?>>
+                  <input type="hidden" name="time" value=<?php echo ('"'.$_GET['time'].'"'); ?>>
                   <div class="large-12 columns">
                     <div class="row collapse prefix-radius">
                       <div class="small-2 columns">
