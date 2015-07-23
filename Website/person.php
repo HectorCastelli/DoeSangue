@@ -31,7 +31,6 @@
       </div>
 
       <div class="row">
-  Aparecida&campain=3
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
               <li><a href="city.php"><?php echo $_GET['city']?></a></li>
@@ -81,7 +80,7 @@
           <div class="large-4 show-for-medium-up columns">
               <div class="panel">
                   <h4>Como funciona?</h4>
-                  <p>Selecione a cidade > selecione a data da campanha > escolha um horário > <em>insira teus dados</em></p>
+                  <p>Selecione a cidade > selecione a data da campanha > escolha um horário > <b>insira os dados</b></p>
 						<p>Os dados solicitados serão usados apenas para o registro e uso no portal e não serão disponibilizados para outros fins.</p>
                   <p>O número do CPF será usado como <em>nome de usuário</em>, para consultar ou cancelar uma reserva.</p>
 						<p>O nome é para a identificação do doador, durante a campanha.</p>
