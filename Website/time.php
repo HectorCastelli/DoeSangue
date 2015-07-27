@@ -30,7 +30,7 @@
 
       <div class="row">
           <div class="large-12 columns">
-              <h1>Portal Doe Sangue: agendamento eletrônico (2/3)</h1>
+              <h1>Agendamento Eletrônico</h1>
           </div>
       </div>
 
@@ -39,7 +39,7 @@
           <ul class="breadcrumbs">
               <li><a href="city.php"><?php echo $_GET['city']?></a></li>
               <li class="current"><a href="#">Selecionando horário</a></li>
-              <!--Make This Dynamic-->
+              <li class="unavailable"><a href="#">Preenchendo dados</a></li>
           </ul>
       </div>
 
@@ -70,7 +70,7 @@
               <div class="panel">
                   <h4>Como funciona?</h4>
                   <p>Selecione a cidade > selecione a data da campanha > <em>escolha um horário</em> > insira teus dados</p>
-                  <p>Os horários mostrados em verde, estão disponíveis. Os demais (em vermelho) já estão esgotados!</p> 
+                  <p>Os horários mostrados em verde, estão disponíveis. Os demais (em vermelho) já estão esgotados!</p>
 						<p>Não existe <em>lista de espera</em>, mas os doadores agendados podem cancelar a reserva até o dia anterior da campanha, de forma a alterar o quadro de vagas disponíveis.</p>
               </div>
           </div>

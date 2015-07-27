@@ -26,40 +26,38 @@
 
       <div class="row">
           <div class="large-12 columns">
-              <h1>Agendamento Eletrônico</h1>
+              <h1>Login como usuário</</h1>
           </div>
       </div>
 
       <div class="row">
-          <h6>Você está em:</h6>
-          <ul class="breadcrumbs">
-              <li><a href="city.php"><?php echo $_GET['city']?></a></li>
-              <li><?php echo('<a href="time.php?city='.$_GET['city'].'&campain='.$_GET[campain].'" class="disabled">'.$_GET["time"]);?></a></li>
-              <li class="current"><a href="#">Preenchendo dados</a></li>
-          </ul>
-      </div>
-
-      <div class="row">
           <div class="large-8 small-12 columns">
-            <h4>Insira os dados, para reservar o horário</h4>
-              <form method="post" action="register.php" data-abide>
-                  <input type="hidden" name="campain" value=<?php echo ('"'.$_GET['campain'].'"'); ?>>
-                  <input type="hidden" name="time" value=<?php echo ('"'.$_GET['time'].'"'); ?>>
+            <h4>Insira os dados cadastrais</h4>
+              <form method="post" action="register.php">
                   <div class="large-12 columns">
-                    <div class="row name-field">
-                      <label>Nome</label>
-                      <input name="name" type="text" required placeholder="Nome">
-                      <small class="error">Nome deve ser preenchido.</small>
+                    <div class="row collapse prefix-radius">
+                      <div class="small-2 columns">
+                        <span class="prefix">Nome</span>
+                      </div>
+                      <div class="small-10 columns">
+                        <input name="name" type="text" required placeholder="Nome">
+                      </div>
                     </div>
-                    <div class="row mail-field">
-                      <label>E-Mail</label>
-                      <input name="mail" type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-Mail">
-                      <small class="error">E-mail deve ser preenchido e válido</small>
+                    <div class="row collapse prefix-radius">
+                      <div class="small-2 columns">
+                        <span class="prefix">E-Mail</span>
+                      </div>
+                      <div class="small-10 columns">
+                        <input name="mail" type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-Mail">
+                      </div>
                     </div>
-                    <div class="row cpf-field">
-                      <label>CPF</label>
-                      <input name="cpf" type="text" required pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" placeholder="CPF com pontos e hífens">
-                      <small class="error">CPF deve ser preenchido e válido</small>
+                    <div class="row collapse prefix-radius">
+                      <div class="small-2 columns">
+                        <span class="prefix">CPF</span>
+                      </div>
+                      <div class="small-10 columns">
+                        <input name="cpf" type="text" required pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" placeholder="CPF com pontos e hífens">
+                      </div>
                     </div>
                     <ul class="button-group even-2">
                       <li><button class="button alert" type="reset">Cancelar</button></li>

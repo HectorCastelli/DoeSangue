@@ -30,7 +30,7 @@
 
       <div class="row">
           <div class="large-12 columns">
-              <h1>Portal Doe Sangue: agendamento eletrônico (1/3)</h1>
+              <h1>Agendamento Eletrônico</h1>
           </div>
       </div>
 
@@ -38,7 +38,8 @@
           <h6>Você está em:</h6>
           <ul class="breadcrumbs">
               <li class="current"><a href="#">Selecionando cidade e data</a></li>
-              <!--Make This Dynamic-->
+              <li class="unavailable"><a href="#">Selecionando horário</a></li>
+              <li class="unavailable"><a href="#">Preenchendo dados</a></li>
           </ul>
       </div>
 
