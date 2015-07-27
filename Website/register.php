@@ -66,12 +66,37 @@
                   if (!$query) {
                     die('Invalid query: ' . mysql_error());
                   }
-
-
-                  //Add campain vacancy logic
+                  $query = mysql_query("SELECT occupied FROM sangue.campain WHERE idcampain = ".$_POST["campain"].";");
+                  $row = mysql_fetch_array($query);
+                  $occupied = $row['occupied'];
+                  $occupied[$time+1] = $occupied[$time+1]+1;
+                  $query = mysql_query("UPDATE `sangue`.`campain` SET `occupied` = '".$occupied."' WHERE `idcampain` = ".$_POST["campain"].";");
+                  if (!$query) {
+                    die('Invalid query: ' . mysql_error());
+                  }
                   echo ('<h4 class="success-text">Sucesso</h4>');
                   echo ('<p>Você deve receber um e-mail com seus dados e links para cancelar ou alterar a reserva.<br> Caso o mesmo não esteja na sua caixa de entrada, verifique sua caixa de <i class="alert-text">spam<i>.</p>');
                   mysql_close($dbConnection);
+
+
+                  $to  = $_POST['mail'];
+                  $subject = 'Confirmação DoeSangue';
+                  $message = '
+                    <html>
+                    <head>
+                     <title>Confirmação DoeSangue</title>
+                    </head>
+                    <body>
+                    <h4>Agradeçemos sua disposição em doar!</h4>
+                    <p>Para cancelar sua reserva, clique <a href="#">aqui</a>.<br /> Para alterar seus dados de registro, clique <a href="">aqui</a>.</p>
+                    </body>
+                    </html>
+                  ';
+                  $headers  = 'MIME-Version: 1.0' . "\r\n";
+                  $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                  $headers .= 'To: '.$_POST['name'].' <'.$_POST['mail'].'>' . "\r\n";
+                  $headers .= 'From: DoeSangue <doesangue@sangue.com.br>' . "\r\n";
+                  mail($to, $subject, $message, $headers);
               ?>
             </div>
           </div>
