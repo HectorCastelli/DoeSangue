@@ -75,7 +75,7 @@
                     die('Invalid query: ' . mysql_error());
                   }
                   echo ('<h4 class="success-text">Sucesso</h4>');
-                  echo ('<p>Você deve receber um e-mail com seus dados e links para cancelar ou alterar a reserva.<br> Caso o mesmo não esteja na sua caixa de entrada, verifique sua caixa de <i class="alert-text">spam<i>.</p>');
+                  echo ('<p>Você deve receber um e-mail com seus dados e links para cancelar ou alterar a reserva.<br> Caso o mesmo não esteja na sua caixa de entrada, verifique sua caixa de <i class="alert-text">spam</i>.</p>');
                   mysql_close($dbConnection);
 
 
@@ -98,6 +98,16 @@
                   $headers .= 'From: DoeSangue <doesangue@sangue.com.br>' . "\r\n";
                   mail($to, $subject, $message, $headers);
               ?>
+              <p>Compartilhe seu ato solidário!</p>
+              <ul class="button-group even-7 round">
+                <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://doesangue.com.br&t=DoeSangue - Eu doei!" class="button" target="_blank" name="Share on Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/intent/tweet?source=http://doesangue.com.br&text=DoeSangue -http://doesangue.com.br Eu doei!&via=doesangue" class="button" target="_blank" name="Tweet it!"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://plus.google.com/share?url=http://doesangue.com.br" class="button" target="_blank" name="Share it on Google Pluse"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="http://www.tumblr.com/share?v=3&u=http://doesangue.com.br&t=DoeSangue&s=" class="button" target="_blank" name="Post it on Tumblr"><i class="fa fa-tumblr"></i></a></li>
+                <li><a href="http://pinterest.com/pin/create/button/?url=http://doesangue.com.br&media=http://doesangue.com.br/img/share.jpg&description=Eu doei! Venha fazer sua parte!" class="button" target="_blank" name="Pin in to you Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http://doesangue.com.br&title=DoeSangue&summary=Eu doei! Venha fazer sua parte!&source=http://doesangue.com.br" class="button" target="_blank" name="Share on your LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="mailto:?subject=DoeSangue&body=Eu doei! Venha fazer sua parte! : http://doesangue.com.br" class="button" target="_blank" name="Send it by Mail"><i class="fa fa-envelope-o"></i></a></li>
+              </ul>
             </div>
           </div>
           <div class="large-4 show-for-medium-up columns">
