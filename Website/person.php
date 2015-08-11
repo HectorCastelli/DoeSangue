@@ -61,6 +61,11 @@
                       <input name="cpf" type="text" required pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" placeholder="CPF com pontos e hífens">
                       <small class="error">CPF deve ser preenchido e válido</small>
                     </div>
+                    <div class="row cpf-field">
+                      <label>Senha <em>(para alteração ou cancelamento)</em></label>
+                      <input name="pass" type="password" required pattern="[a-z0-9._%+-]" placeholder="Senha com caracteres alfanméricos">
+                      <small class="error">Senha deve ser preenchida e válida</small>
+                    </div>
                     <ul class="button-group even-2">
                       <li><button class="button alert" type="reset">Cancelar</button></li>
                       <li><button class="button success" type="submit">Aceitar</button></li>
