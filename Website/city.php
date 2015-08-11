@@ -50,9 +50,13 @@
               <ul class="accordion" data-accordion>
                 <?php
                 $dbConnection = mysql_connect($servername, $username, $password);
+if (!$dbConnection) {
+    die('Não foi possível conectar: ' . mysql_error());
+}
                 mysql_select_db($database, $dbConnection);
                 $count=0;
                 $query = mysql_query("SELECT `city`.`name`, `campain`.`enabled` FROM `sangue`.`campain` INNER JOIN `sangue`.`city` ON `campain`.`idcity`=`city`.`idcity` WHERE `campain`.`enabled` = '1' GROUP BY `name` ORDER BY `name` ASC;");
+
                 while($row = mysql_fetch_array($query)) {
                   echo ('
                     <li class="accordion-navigation">
