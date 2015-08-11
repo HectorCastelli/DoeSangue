@@ -3,7 +3,7 @@ add_import_path "bower_components/foundation/scss"
 add_import_path "bower_components/font-awesome/scss"
 
 # Set this to the root of your project when deployed:
-http_path = "/"
+http_path = "/DoeSangue/Website/"
 css_dir = "stylesheets"
 sass_dir = "scss"
 images_dir = "images"
