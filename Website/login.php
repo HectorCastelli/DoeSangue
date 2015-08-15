@@ -35,46 +35,52 @@
       </div>
 
       <div class="row">
-          <h6>Você está em:</h6>
-          <ul class="breadcrumbs">
-              <li><a href="city.php"><?php echo $_GET['city']?></a></li>
-              <li class="current"><a href="#">Selecionando horário</a></li>
-              <li class="unavailable"><a href="#">Preenchendo dados</a></li>
-          </ul>
-      </div>
-
-      <div class="row">
           <div class="large-8 small-12 columns">
-            <h4>Selecione um horário disponível</h4>
-            <ul class="accordion" data-accordion>
-              <li class="accordion-navigation">
-                <a href="#panel2a">Accordion 2</a>
-                <div id="panel2a" class="content">
-                  Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-              </li>
-              <li class="accordion-navigation">
-                <a href="#panel3a">Accordion 3</a>
-                <div id="panel3a" class="content">
-                  Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-              </li>
-            </ul>
             <div class="large-12 columns">
               <?php
                 $dbConnection = mysql_connect($servername, $username, $password);
                 mysql_select_db($database, $dbConnection);
-                $query = mysql_query("SELECT `campain`.`idcampain`, `campain`.`date`, `campain`.`vacant`, `campain`.`occupied`, `campain`.`starttime` FROM `sangue`.`campain` WHERE `campain`.`idcampain` = ".$_GET['campain'].";");
+                $query = mysql_query("SELECT `user`.`iduser`, `user`.`name`, `user`.`mail`, `user`.`cpf`, `user`.`password` FROM `sangue`.`user` WHERE `user`.`cpf`='".$_POST['cpf']."' AND `user`.`password` = '".$_POST['pass']."' ;");
                 while($row = mysql_fetch_array($query)) {
-                  $free = $row["vacant"];
-                  $taken = $row["occupied"];
-                  $start = $row["starttime"];
-                  for ($i=0; $i<strlen($free); $i++) {
-                    if ($free[$i] - $taken[$i] > 0)
-                        echo ('<a class="button radius large-12 small-12 success" href="person.php?city='.$_GET['city'].'&campain='.$_GET['campain'].'&time='.$i.'">'.resTime($start, $i).'</a>');
-                    else
-                      echo ('<span class="button radius large-12 small-12 alert disabled">'.resTime($start, $i).'</span>');
+                  echo '<h4>Olá '.$row['name'].'</h4>';
+                  echo ('
+                      <ul class="accordion" data-accordion>
+                        <li class="accordion-navigation">
+                          <a href="#data">Dados Cadastrais</a>
+                          <div id="data" class="content">
+                             <form method="post" action="update.php" data-abide>
+                                  <div class="row name-field">
+                                    <label>Nome</label>
+                                    <input name="name" type="text" required placeholder="Nome" value="'.$row['name'].'">
+                                    <small class="error">Nome deve ser preenchido.</small>
+                                  </div>
+                                  <div class="row mail-field">
+                                    <label>E-Mail</label>
+                                    <input name="mail" type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-Mail" value="'.$row['mail'].'">
+                                    <small class="error">E-mail deve ser preenchido e válido</small>
+                                  </div>
+                                  <ul class="button-group even-2">
+                                    <li><button class="button alert" type="reset">Cancelar</button></li>
+                                    <li><button class="button success" type="submit">Aceitar</button></li>
+                                  </ul>
+                            </form>
+                          </div>
+                        </li>
+                        <li class="accordion-navigation">
+                          <a href="#camp">Campanhas Ativas</a>
+                          <div id="camp" class="content"> ');
+                  $query2 = mysql_query("SELECT `donnors`.`iddonnors`,`donnors`.`iduser`,`donnors`.`idcity`,`donnors`.`idcampain`,`donnors`.`time`,`city`.`name`,`campain`.`date`  FROM `sangue`.`donnors` LEFT JOIN `sangue`.`city` ON `donnors`.`idcity`=`city`.`idcity`  LEFT JOIN `sangue`.`campain` ON `donnors`.`idcampain`=`campain`.`idcampain`WHERE `donnors`.`iduser` = 1 ORDER BY `city`.`name` ;");
+                  while($row2 = mysql_fetch_array($query2)) {
+                     echo ('<a href="exclude.php?campain='.$row2['idcampain'].'&time='.$row2['time'].'" class="button info expand"><b>'.fixDate($row2['date']).'</b><br />'.$row2['name'].'</a>');
                   }
+                  echo ('
+                          </div>
+                        </li>
+                      </ul>
+                  ');
+                }
+                if (mysql_num_rows($query) == 0 ) {
+                  echo '<h4>Seu login falhou, tente novamente.</h4>';
                 }
                 mysql_close($dbConnection);
               ?>

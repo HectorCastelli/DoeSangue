@@ -44,9 +44,15 @@
                   //$query = mysql_query("");
                   //Must change parameter in sangue.campain and add register to sangue.donnors
                   /*$time    $campain    $mail    $name    $cpf*/
-                  $query = mysql_query("INSERT INTO `sangue`.`user` (`name`, `mail`, `cpf`, `password`) VALUES ('".$_POST["name"]."', '".$_POST["mail"]."', '".$_POST["cpf"]."', '".$_POST["pass"]."');");
+                  $query = mysql_query("SELECT `iduser` FROM sangue.user WHERE `cpf`='".$_POST["cpf"]."';");
                   if (!$query) {
                     die('Invalid query: ' . mysql_error());
+                  }
+                  if (mysql_num_rows($query) == 0 ) {
+                    $query = mysql_query("INSERT INTO `sangue`.`user` (`name`, `mail`, `cpf`, `password`) VALUES ('".$_POST["name"]."', '".$_POST["mail"]."', '".$_POST["cpf"]."', '".$_POST["pass"]."');");
+                    if (!$query) {
+                      die('Invalid query: ' . mysql_error());
+                    }
                   }
                   $query = mysql_query("SELECT `iduser` FROM sangue.user WHERE `cpf`='".$_POST["cpf"]."';");
                   if (!$query) {
