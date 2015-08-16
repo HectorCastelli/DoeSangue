@@ -71,7 +71,7 @@
                           <div id="camp" class="content"> ');
                   $query2 = mysql_query("SELECT `donnors`.`iddonnors`,`donnors`.`iduser`,`donnors`.`idcity`,`donnors`.`idcampain`,`donnors`.`time`,`city`.`name`,`campain`.`date`  FROM `sangue`.`donnors` LEFT JOIN `sangue`.`city` ON `donnors`.`idcity`=`city`.`idcity`  LEFT JOIN `sangue`.`campain` ON `donnors`.`idcampain`=`campain`.`idcampain`WHERE `donnors`.`iduser` = 1 ORDER BY `city`.`name` ;");
                   while($row2 = mysql_fetch_array($query2)) {
-                     echo ('<a href="exclude.php?campain='.$row2['idcampain'].'&time='.$row2['time'].'" class="button info expand"><b>'.fixDate($row2['date']).'</b><br />'.$row2['name'].'</a>');
+                     echo ('<a href="exclude.php?campain='.$row2['idcampain'].'&time='.$row2['time'].'&donnors='.$row2['iddonnors'].'" class="button info expand"><b>'.fixDate($row2['date']).'</b><br />'.$row2['name'].'</a>');
                   }
                   echo ('
                           </div>
