@@ -75,7 +75,8 @@
                   $query = mysql_query("SELECT occupied FROM sangue.campain WHERE idcampain = ".$_POST["campain"].";");
                   $row = mysql_fetch_array($query);
                   $occupied = $row['occupied'];
-                  $occupied[$time+1] = $occupied[$time+1]+1;
+                  $time = $_POST['time'];
+                  $occupied[$time] = $occupied[$time]+1;
                   $query = mysql_query("UPDATE `sangue`.`campain` SET `occupied` = '".$occupied."' WHERE `idcampain` = ".$_POST["campain"].";");
                   if (!$query) {
                     die('Invalid query: ' . mysql_error());
