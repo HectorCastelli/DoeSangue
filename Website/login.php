@@ -49,6 +49,7 @@
                           <a href="#data">Dados Cadastrais</a>
                           <div id="data" class="content">
                              <form method="post" action="update.php" data-abide>
+                                  <input type="hidden" name="user" value="'.$row["iduser"].'">
                                   <div class="row name-field">
                                     <label>Nome</label>
                                     <input name="name" type="text" required placeholder="Nome" value="'.$row['name'].'">
@@ -89,9 +90,7 @@
           <div class="large-4 show-for-medium-up columns">
               <div class="panel">
                   <h4>Como funciona?</h4>
-                  <p>Selecione a cidade > selecione a data da campanha > <em>escolha um horário</em> > insira teus dados</p>
-                  <p>Os horários mostrados em verde, estão disponíveis. Os demais (em vermelho) já estão esgotados!</p>
-						<p>Não existe <em>lista de espera</em>, mas os doadores agendados podem cancelar a reserva até o dia anterior da campanha, de forma a alterar o quadro de vagas disponíveis.</p>
+                  <p>Insira os dados que foram cadastrados na sua primeira doação neste portal.</p>
               </div>
           </div>
       </div>

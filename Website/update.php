@@ -37,27 +37,11 @@
       <div class="row">
           <div class="large-12 small-12 columns">
               <div class="large-12 columns">
-                <h4>Exclusão Bem-Suscedida.</h4>
+                <h4>Atualização Bem-Suscedida.</h4>
                 <?php
                   $dbConnection - mysql_connect($servername, $username, $password);
                   mysql_select_db($database, $dbConnection);
-                  //$query = mysql_query("");
-                  //Must change parameter in sangue.campain and add register to sangue.donnors
-                  /*$campain    $time    $donnors*/
-                  $query = mysql_query("SELECT * FROM sangue.campain WHERE `idcampain`='".$_GET["campain"]."';");
-                  if (!$query) {
-                    die('Invalid query: ' . mysql_error());
-                  }
-                  while ($row = mysql_fetch_assoc($query)) {
-                    $occupied = $row["occupied"];
-                  }
-                  $time = $_GET["time"];
-                  $occupied[$time+1] = $occupied[$time+1]+1;
-                  $query = mysql_query("UPDATE `sangue`.`campain` SET `occupied`='".$occupied."' WHERE `idcampain`='".$_GET["campain"]."';");
-                  if (!$query) {
-                    die('Invalid query: ' . mysql_error());
-                  }
-                  $query = mysql_query("DELETE FROM `sangue`.`donnors` WHERE `iddonnors`='".$_GET["donnors"]."';");
+                  $query = mysql_query("UPDATE `sangue`.`user` SET `name`='".$_POST["name"]."', `mail`='".$_POST["mail"]."' WHERE `iduser`='".$_POST["user"]."';");
                   if (!$query) {
                     die('Invalid query: ' . mysql_error());
                   }

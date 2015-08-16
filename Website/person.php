@@ -77,11 +77,11 @@
               <div class="panel">
                   <h4>Como funciona?</h4>
                   <p>Selecione a cidade > selecione a data da campanha > escolha um horário > <b>insira os dados</b></p>
-						<p>Os dados solicitados serão usados apenas para o registro e uso no portal e não serão disponibilizados para outros fins.</p>
+						      <p>Os dados solicitados serão usados apenas para o registro e uso no portal e não serão disponibilizados para outros fins.</p>
                   <p>O número do CPF será usado como <em>nome de usuário</em>, para consultar ou cancelar uma reserva.</p>
-						<p>O nome é para a identificação do doador, durante a campanha.</p>
-						<p>O e-mail será usado para que o portal possa enviar mensagens relembrando a reserva e para avisar quando novas campanhas são disponibilizadas.</p>
-						<p>Nenhum dado informado durante a campanha (biometria e entrevista) ou decorrente da análise do sangue coletado, será armazenado no portal. Estes dados são de uso restrito em atendimento às normas estabelecidas pelo Ministério da Saúde do Brasil.</p>
+						      <p>O nome é para a identificação do doador, durante a campanha.</p>
+						      <p>O e-mail será usado para que o portal possa enviar mensagens relembrando a reserva e para avisar quando novas campanhas são disponibilizadas.</p>
+						      <p>Nenhum dado informado durante a campanha (biometria e entrevista) ou decorrente da análise do sangue coletado, será armazenado no portal. Estes dados são de uso restrito em atendimento às normas estabelecidas pelo Ministério da Saúde do Brasil.</p>
               </div>
           </div>
       </div>
