@@ -68,11 +68,37 @@
                           </div>
                         </li>
                         <li class="accordion-navigation">
-                          <a href="#camp">Campanhas Ativas</a>
-                          <div id="camp" class="content"> ');
+                          <a href="#alter">Alterar Horário</a>
+                          <div id="alter" class="content">
+                  ');
                   $query2 = mysql_query("SELECT `donnors`.`iddonnors`,`donnors`.`iduser`,`donnors`.`idcity`,`donnors`.`idcampain`,`donnors`.`time`,`city`.`name`,`campain`.`date`  FROM `sangue`.`donnors` LEFT JOIN `sangue`.`city` ON `donnors`.`idcity`=`city`.`idcity`  LEFT JOIN `sangue`.`campain` ON `donnors`.`idcampain`=`campain`.`idcampain`WHERE `donnors`.`iduser` = 1 ORDER BY `city`.`name` ;");
                   while($row2 = mysql_fetch_array($query2)) {
-                     echo ('<a href="exclude.php?campain='.$row2['idcampain'].'&time='.$row2['time'].'&donnors='.$row2['iddonnors'].'" class="button info expand"><b>'.fixDate($row2['date']).'</b><br />'.$row2['name'].'</a>');
+                    echo '<h5>'.$row2['name'].' <small>('.fixDate($row2['date']).')</small></h5>';
+                    $query3 = mysql_query("SELECT `campain`.`idcampain`, `campain`.`date`, `campain`.`vacant`, `campain`.`occupied`, `campain`.`starttime` FROM `sangue`.`campain` WHERE `campain`.`idcampain` = ".$row2['idcampain'].";");
+                    while($row3 = mysql_fetch_array($query3)) {
+                      $free = $row3["vacant"];
+                      $taken = $row3["occupied"];
+                      $start = $row3["starttime"];
+                      for ($i=0; $i<strlen($free); $i++) {
+                        if ($i == $row2['time']) {
+                          echo ('<span class="button radius large-12 small-12 info disabled">'.resTime($start, $i).'</span>');
+                        } else {
+                          if ($free[$i] - $taken[$i] > 0)
+                            echo ('<a class="button radius large-12 small-12 success" href="rebook.php?donnors='.$row2["iddonnors"].'&campain='.$row3['idcampain'].'&time='.$i.'&oldtime='.$row2['time'].'">'.resTime($start, $i).'</a>');
+                        }
+                      }
+                    }
+                  }
+                  echo ('
+                          </div>
+                        </li>
+                        <li class="accordion-navigation">
+                          <a href="#camp">Excluir Agendamento</a>
+                          <div id="camp" class="content">
+                  ');
+                  $query4 = mysql_query("SELECT `donnors`.`iddonnors`,`donnors`.`iduser`,`donnors`.`idcity`,`donnors`.`idcampain`,`donnors`.`time`,`city`.`name`,`campain`.`date`  FROM `sangue`.`donnors` LEFT JOIN `sangue`.`city` ON `donnors`.`idcity`=`city`.`idcity`  LEFT JOIN `sangue`.`campain` ON `donnors`.`idcampain`=`campain`.`idcampain`WHERE `donnors`.`iduser` = 1 ORDER BY `city`.`name` ;");
+                  while($row4 = mysql_fetch_array($query4)) {
+                     echo ('<a href="exclude.php?campain='.$row4['idcampain'].'&time='.$row4['time'].'&donnors='.$row4['iddonnors'].'" class="button alert expand"><b>'.fixDate($row4['date']).'</b><br />'.$row4['name'].'</a>');
                   }
                   echo ('
                           </div>
